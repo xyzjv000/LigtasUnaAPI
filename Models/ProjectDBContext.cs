@@ -20,5 +20,6 @@ namespace ligtasUnaAPI.Models
         public DbSet<Image> Images { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
         public DbSet<Bookmark> Bookmarks { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlMfnnkvNYUay9jvRlQsxkAAAAAACAAAAAAADZgAAwAAAABAAAAA0pAm7B7kzoorPqtQ9TPazAAAAAASAAACgAAAAEAAAAInmkvyppJkeeCXqtjmVP5CAAAAAs2TqkOEy4PhZmVdIh0RckHPSKh6V8q9mW+ShGeNGKV8QnM6S3/K+TmrA9iD1GoK5nBBebO6fNnQ8Vn/vgl2/HVzrjXAzDW47A0crzyW7eW5NFGEiZJ4nvU0DbVY3T29pyrxQfZ4B7JSWYnUhYvsJPfb7KUgbFrISbefkdr8FauEUAAAASnDnucEs4OlWK6TZPqzfPlZrGuU=</EncryptedPassword>
+    <History>True|2021-12-09T07:33:05.9517180Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DevConnection">
+      <Value>Server=tcp:ligtasuna.database.windows.net,1433%3bInitial Catalog=ligtasuna%3bPersist Security Info=False%3bUser ID=ligtasuna%3bPassword=%40ctuict123%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

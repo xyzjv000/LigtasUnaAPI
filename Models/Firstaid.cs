@@ -22,6 +22,12 @@ namespace ligtasUnaAPI.Models
 
         [Column(TypeName = "nvarchar(max)")]
         public string FaidPR_Des { get; set; }
+
+        [Column(TypeName = "nvarchar(max)")]
+        public string FaidPR_Tools { get; set; }
+
+        [Column(TypeName = "nvarchar(max)")]
+        public string FaidPR_Medicine { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime Created { get; set; }
     }

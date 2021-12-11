@@ -26,7 +26,7 @@ namespace ligtasUnaAPI.Controllers
         {
             try
             {
-                var result = await _context.Bookmarks.FromSqlRaw($"SELECT * FROM [dbo].[Bookmark] WHERE User_ID={userId} AND FaidPR_ID={faid} ").ToListAsync();
+                var result = await _context.Bookmarks.FromSqlRaw($"SELECT * FROM [dbo].[Bookmarks] WHERE User_ID={userId} AND FaidPR_ID={faid} ").ToListAsync();
                 return Ok(result);
             }
             catch (DbUpdateConcurrencyException)
@@ -44,7 +44,7 @@ namespace ligtasUnaAPI.Controllers
         {
             try
             {
-                var result = await _context.Bookmarks.FromSqlRaw($"SELECT * FROM [dbo].[Bookmark] WHERE FaidPR_ID={faid}").ToListAsync();
+                var result = await _context.Bookmarks.FromSqlRaw($"SELECT * FROM [dbo].[Bookmarks] WHERE FaidPR_ID={faid}").ToListAsync();
                 return Ok(result);
             }
             catch (DbUpdateConcurrencyException)
@@ -72,7 +72,7 @@ namespace ligtasUnaAPI.Controllers
                                  title = f.FaidPR_ID
                              };
                  var result = await query.OrderBy(o => o.id).ToListAsync();*/
-                var result = await _context.Bookmarks.FromSqlRaw($"SELECT * FROM [dbo].[Bookmark] WHERE User_ID={userId}").Include(e => e.Firstaids).ToListAsync();
+                var result = await _context.Bookmarks.FromSqlRaw($"SELECT * FROM [dbo].[Bookmarks] WHERE User_ID={userId}").Include(e => e.Firstaids).ToListAsync();
                 return Ok(result);
             }
             catch (DbUpdateConcurrencyException)
@@ -93,7 +93,7 @@ namespace ligtasUnaAPI.Controllers
             DateTime currentDate = DateTime.Now;
             try
             {
-                var result = await _context.Bookmarks.FromSqlRaw($"INSERT INTO [dbo].[Bookmark] (Bookmark_date,User_ID,FaidPR_ID)  VALUES ('{currentDate}',{userId},{faid}) SELECT TOP(1) * FROM [dbo].[Bookmark] ORDER BY Bookmark_ID DESC").ToListAsync();
+                var result = await _context.Bookmarks.FromSqlRaw($"INSERT INTO [dbo].[Bookmarks] (Bookmark_date,User_ID,FaidPR_ID)  VALUES ('{currentDate}',{userId},{faid}) SELECT TOP(1) * FROM [dbo].[Bookmarks] ORDER BY Bookmark_ID DESC").ToListAsync();
               
                 return Ok(result);
             }
@@ -110,7 +110,7 @@ namespace ligtasUnaAPI.Controllers
 
             try
             {
-                var result = await _context.Bookmarks.FromSqlRaw($"DELETE FROM [dbo].[Bookmark] WHERE User_ID={userId} AND FaidPR_ID={faid}  SELECT * FROM [dbo].[Bookmark]").ToListAsync();
+                var result = await _context.Bookmarks.FromSqlRaw($"DELETE FROM [dbo].[Bookmarks] WHERE User_ID={userId} AND FaidPR_ID={faid}  SELECT * FROM [dbo].[Bookmark]").ToListAsync();
                 return Ok(result);
             }
             catch (DbUpdateConcurrencyException)

@@ -42,6 +42,8 @@ namespace ligtasUnaAPI.Controllers
                             description = faid.FaidPR_Des,
                             created = faid.Created,
                             category = cat.Cat_Name,
+                            tools = faid.FaidPR_Tools,
+                            medicine = faid.FaidPR_Medicine,
                             imgUrl = img.FaidPR_ImgUrl,
                             imgName = img.FaidPR_ImgName,
                             vidUrl = vid.FaidPR_VidUrl,

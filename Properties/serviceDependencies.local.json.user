@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-12-09T07:27:44.3908792Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-12-09T07:27:46.770546Z"
+    },
+    "secrets2": {
+      "restored": true,
+      "restoreTime": "2021-12-09T07:31:07.640305Z"
+    }
+  },
+  "parameters": {
+    "secrets2.resourceGroupName": {
+      "Name": "secrets2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "LIGTASUNA"
+    },
+    "secrets2.subscriptionId": {
+      "Name": "secrets2.subscriptionId",
+      "Type": "subscription",
+      "Value": "9733dd70-3ad2-4288-95bf-1dea44868ff1"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "9733dd70-3ad2-4288-95bf-1dea44868ff1"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "LIGTASUNA"
+    }
+  }
+}
